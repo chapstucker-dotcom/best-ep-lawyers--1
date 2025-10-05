@@ -8,6 +8,7 @@ export function Pricing() {
       period: "/month",
       cta: "List my firm (Free)",
       features: ["1 photo", "Firm name & contact info", "1 practice area", "Appears in search"],
+      highlighted: false,
     },
     {
       name: "Basic",
@@ -31,6 +32,7 @@ export function Pricing() {
       period: "/month",
       cta: "Go Expert",
       features: ["Top-of-page placement", "Video showcase", "Case highlights", "Dedicated success manager"],
+      highlighted: false,
     },
   ] as const;
 
@@ -43,7 +45,8 @@ export function Pricing() {
           {tiers.map((t) => (
             <div
               key={t.name}
-              className={["rounded-2xl border bg-white p-6 shadow-sm", t.highlighted ? "ring-2 ring-amber-400" : ""].join(" ")}
+            className={["rounded-2xl border bg-white p-6 shadow-sm", t.name === "Professional" ? "ring-2 ring-amber-400" : ""].join(" ")}
+
             >
               <div className="flex items-baseline gap-2">
                 <h3 className="text-xl font-semibold">{t.name}</h3>
