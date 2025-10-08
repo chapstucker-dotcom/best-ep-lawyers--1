@@ -45,7 +45,8 @@ export function Pricing() {
           {tiers.map((t) => (
             <div
               key={t.name}
-            className={["rounded-2xl border bg-white p-6 shadow-sm", t.name === "Professional" ? "ring-2 ring-amber-400" : ""].join(" ")}
+           className={["rounded-2xl border bg-white p-6 shadow-sm", t.name === "Professional" ? "ring-2 ring-amber-400" : ""].join(" ")}
+
 
             >
               <div className="flex items-baseline gap-2">
@@ -73,3 +74,6 @@ export function Pricing() {
     </section>
   );
 }
+notepad components\Pricing.tsx
+
+
